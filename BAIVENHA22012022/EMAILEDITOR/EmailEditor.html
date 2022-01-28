@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/emaileditor.css">
+    <title>E-mail Editor</title>
+</head>
+<body>
+    <div class="nav">
+        <div id="main">
+			<div class="ismain">
+				<div class="tablemain" style="text-align: right;">
+            		<br><h1 style="text-align:left; margin-left: 10px;">Compose e-mail message.</h1><br>
+            		To:<input></input><br>
+            		From:<input></input><br>
+            		Cc:<input></input><br>
+            		Subject:<input></input><br>
+            		Message:<input></input><br>
+				</div>
+				<div class="butmain">
+					<textarea cols="5" rows="5" style="scrollbar-3dlight-color: #C0C0C0; scrollbar-shadow-color: silver; scrollbar-arrow-color: black; scrollbar-face-color: gray; overflow-y: scroll; border: solid 2px; width: 240px; "></textarea><br>
+					<div class="isbutmain">
+            			<a href="Done.html">
+                			<button>send</button>
+            			</a>
+            			<button>cancel</button>
+					</div>
+				</div>
+			</div>
+        </div>
+        <div class="Help" id="HelpId" onclick="clickOpen()">
+            <h2>Help</h2>
+        </div>
+    </div>
+    <div class="HelpBlock" id="HelpBlockId">
+		<h2>-: E-mail Editor Help :-</h2>
+		<ul>
+			<li>
+				<b>To and Cc:</b>
+				<br/>
+				<b>To</b> and <b>Cc</b> boxes allow you to enter the e-mail addesses of the recepients<br> to whom to message has to be sent. Recipients will be able to see who else<br> was sent the message by looking at the contents of the <b>To</b> and <b>Cc</b> boxes.
+			</li>
+			<li>
+				<b>Subject:</b>
+				<br/>
+				The <b>Subject</b> box allows you to enter meaningful summary of the message.
+			</li>
+			<li>
+				<b>Message:</b>
+				<br/>
+				The <b>Message</b> TextArea allows you to enter the text of your message.
+			</li>
+		</ul>
+		<div class="Close" onclick="clickClose()">
+			Close
+		</div>
+	</div>
+    <script type="text/javascript">
+		function clickOpen() 
+		{
+			document.getElementById('HelpBlockId').style.display = 'block'
+			document.getElementById('mainId').style.display = 'none'
+			document.getElementById('HelpId').style.display = 'none'
+		}
+		function clickClose()
+		{
+			document.getElementById('HelpBlockId').style.display = 'none'
+			document.getElementById('mainId').style.display = 'block'
+			document.getElementById('HelpId').style.display = 'block'
+		}
+	</script>
+</body>
+</html>
