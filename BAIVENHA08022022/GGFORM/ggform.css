@@ -1,0 +1,80 @@
+html,
+body {
+  min-height: 500px;
+  background-color: hsl(259deg 62% 95%);
+}
+* {
+  padding: 0;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+header {
+  width: 100%;
+  height: 15vh;
+  min-height: 120px;
+  background-color: hsl(260deg 48% 48%);
+}
+form {
+  margin: 0 auto;
+  width: 50vw;
+  background-color: hsl(0deg 0% 100%);
+  border-top: 15px solid hsl(264deg 97% 74%);
+  padding-left: 35px;
+  padding-right: 35px;
+  position: relative;
+  top: -60px;
+  border-radius: 3px;
+  min-width: 500px;
+}
+form h1 {
+  padding-bottom: 15px;
+  padding-top: 30px;
+}
+p:nth-child(3),
+span {
+  color: rgb(201, 0, 0);
+}
+label {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+input {
+  border: none;
+  border-bottom: 2px solid rgba(128, 128, 128, 0.103);
+  margin-bottom: 40px;
+  padding: 3px 0;
+}
+input:first-of-type {
+  width: 50%;
+}
+input:focus {
+  outline: none;
+  border-bottom: 2px solid transparent;
+}
+.feedback{
+  width: 100% !important;
+}
+.line1 {
+  width: 0%;
+  transition: .5s;
+  display: block;
+  border-top: 3px solid hsl(260deg 48% 48%);
+}
+.line2{
+  width: 0%;
+  display: block;
+  border-top: 3px solid hsl(260deg 48% 48%);
+  transition: 0.5s;
+}
+.line1,.line2{
+  position: absolute;
+  top: 29px;
+  left: 0;
+}
+input:focus~.line1 {
+  width:50%;
+}
+input:focus~.line2 {
+  width:100%;
+}
